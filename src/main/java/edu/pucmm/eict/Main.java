@@ -98,7 +98,7 @@ public class Main {
         app.start(getHerokuAssignedPort());
 
         //creando el manejador
-        app.get("/", ctx -> ctx.result("Hola Mundo en Javalin :-D"));
+        app.get("/", ctx -> ctx.result("Hola, Mundo, esta es la aplicación 2"));
 
         //aplicando los diferentes conceptos.
         new ConceptoBasicosControlador(app).aplicarRutas();
@@ -146,7 +146,7 @@ public class Main {
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
         }
-        return 7000; //Retorna el puerto por defecto en caso de no estar en Heroku.
+        return 7070; //Retorna el puerto por defecto en caso de no estar en Heroku.
     }
 
     /*private static OpenApiOptions getOpenApiOptions() {
